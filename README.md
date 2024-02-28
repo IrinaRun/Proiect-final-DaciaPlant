@@ -11,16 +11,16 @@ Browser – am utilizat acest modul pentru a controla interactiunea cu browserul
 Pentru instalarea librariilor se foloseste comanda pip install <nume-librarie> in linia de comanda (de ex selenium)
 
 Testele realizate pe aplicatia aleasa au fost urmatoarele:
-- am verificat ca se poate face logarea in cont cu date corecte
-- am verificat ca se afiseaza un mesaj de eroare daca se incearca logarea cu credentiale gresite
-- am verificat ca se poate face cautarea unui anumit produs (‘vitamina C’) 
-- am verificat  ca nr de produse gasite este mai mare de 10
-- am verificat ca se poate naviga si alege o anumita categorie (‘Antistres) si in cadrul categoriei alese se poate selecta o subcategorie (‘Insomnie’) 
-- am verificat ca in aceasta subcategorie sunt afisate minim 3 produse
-- am verificat ca se poate adauga un produs in cos
-- am verificat ca se poate sterge un produs din cos
-- am verificat ca se poate face delogarea din cont
-- am verificat ca se poate adauga un produs la favorite
+- am testat ca se poate face logarea in cont cu date corecte
+- am testat ca se afiseaza un mesaj de eroare daca se incearca logarea cu credentiale gresite
+- am testat ca se poate face cautarea unui anumit produs (‘vitamina C’) 
+- am testat  ca nr de produse gasite este mai mare de 10
+- am testat ca se poate naviga si alege o anumita categorie (‘Antistres) si in cadrul categoriei alese se poate selecta o subcategorie (‘Insomnie’) 
+- am testat ca in aceasta subcategorie sunt afisate minim 3 produse
+- am testat ca se poate adauga un produs in cos
+- am testat ca se poate sterge un produs din cos
+- am testat ca se poate face delogarea din cont
+- am testat ca se poate adauga un produs la favorite
 
 
 
