@@ -1,0 +1,26 @@
+Pentru proiect am ales sa testez site-ul www.daciaplant.ro (un site de vanzare produse naturiste) folosind testare automata cu ajutorul librariei unittest
+
+Testarea automata este importanta deoarece permite realizarea unui numar mare de teste intr-un timp mai scurt decat la testarea manuala. Ea ajuta la marirea productivitatii.
+	In cadrul proiectului am folosit limbajul de programare Python si am utilizat IDE-ul PyCharm pentru a dezvolta si rula codul. Python este un un limbaj de programare popular, cunoscut pentru simplitatea sa. PyCharm este un mediu de dezvoltare integrat (IDE) specializat pentru dezvoltarea in Python, oferind un set bogat de functionaloitati si instrumente.
+	Pentru a dezvolta si rula codul am folosit urmatoarele librarii:
+unittest – am importat modulul unitttest care furnizeaza un framework pentru testarea automata si manuala
+Time – am importat acest modul pentru a utiliza functia Sleep. Modulul nu necesita instalare suplimentara
+Selenium: Am utilizat modulul selenium.common pt a importa clasa NoSuchElementException si modulul seleniu.webdriver.common.by pt a importa clasa By
+Selenium.webdriver.support: am importat modulul WebDriverWait si modulul expected_conditions - pentru a astepta conditii specifice in timpul rularii testelor. Sunt instalate in libraria Selenium si nu necesita instalare separata.
+Browser – am utilizat acest modul pentru a controla interactiunea cu browserul web
+Pentru instalarea librariilor se foloseste comanda pip install <nume-librarie> in linia de comanda (de ex selenium)
+
+Testele realizate pe aplicatia aleasa au fost urmatoarele:
+- am verificat ca se poate face logarea in cont cu date corecte
+- am verificat ca se afiseaza un mesaj de eroare daca se incearca logarea cu credentiale gresite
+- am verificat ca se poate face cautarea unui anumit produs (‘vitamina C’) 
+- am verificat  ca nr de produse gasite este mai mare de 10
+- am verificat ca se poate naviga si alege o anumita categorie (‘Antistres) si in cadrul categoriei alese se poate selecta o subcategorie (‘Insomnie’) 
+- am verificat ca in aceasta subcategorie sunt afisate minim 3 produse
+- am verificat ca se poate adauga un produs in cos
+- am verificat ca se poate sterge un produs din cos
+- am verificat ca se poate face delogarea din cont
+- am verificat ca se poate adauga un produs la favorite
+
+
+
