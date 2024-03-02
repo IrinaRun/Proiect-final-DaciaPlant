@@ -17,7 +17,7 @@ class Search_products(TestCase):
     CONNECT = (By.ID, 'authorization-trigger')
     SELECT = (By.XPATH, '//*[@id="menu-5-65a52e42cc63d"]/ul/li[1]/a')
     CATEG_ANTISTRES = (By.XPATH, "//span[text() = 'Antistres']")
-    CLS_ANTISTRES = (By.XPATH, '//*[@id="html-body"]/div[4]/div[1]/div/ul/li[2]/strong')
+    CLS_ANTISTRES = (By.XPATH, '//*[@class="item amasty_xlanding_page"]')
     CAUTARE_PROD = (By.ID, 'search')
     SEARCH_BTN = (By.XPATH, '//*[@id="search_mini_form"]/div[2]/button')
     NR_PROD = (By.XPATH, '// *[ @ id = "category-products-grid"]//li[@class = "item product product-item"]')
