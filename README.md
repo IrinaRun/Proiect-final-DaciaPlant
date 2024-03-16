@@ -1,13 +1,13 @@
-Descrierea proiectului
+**Descrierea proiectului**
 
 	Pentru proiect am ales sa testez site-ul www.daciaplant.ro (un site de vanzare produse naturiste) folosind testare automata cu ajutorul librariei unittest
 
-Framework folosit
+**Framework folosit**
 
 	Am folosit testarea automata cu ajutorul librariei unittest.
 Testarea automata este importanta deoarece permite realizarea unui numar mare de teste intr-un timp mai scurt decat la testarea manuala. Ea ajuta la marirea productivitatii.
 
-Tools
+**Tools**
 
 	In cadrul proiectului am folosit limbajul de programare Python si am utilizat IDE-ul PyCharm pentru a dezvolta si rula codul. Python este un un limbaj de programare popular, cunoscut pentru simplitatea sa. PyCharm este un mediu de dezvoltare integrat (IDE) specializat pentru dezvoltarea in Python, oferind un set bogat de functionaloitati si instrumente.
 	Pentru a dezvolta si rula codul am folosit urmatoarele librarii:
@@ -18,7 +18,7 @@ Tools
 - Browser – am utilizat acest modul pentru a controla interactiunea cu browserul web
 Pentru instalarea librariilor se foloseste comanda pip install <nume-librarie> in linia de comanda (de ex selenium)
 
-Teste
+**Teste**
 
 	Testele realizate pe aplicatia aleasa au fost urmatoarele:
 - am testat ca se poate face logarea in cont cu date corecte
@@ -32,18 +32,15 @@ Teste
 - am testat ca se poate face delogarea din cont
 - am testat ca se poate adauga un produs la favorite
 
-  Instalarea proiectului
+  **Instalarea proiectului**
   
   Pentru a utiliza proiectul, urmați acesti pași:
   
- 	Clonarea proiectului : Executați comanda git clone https://github.com/IrinaRun/Proiect-final-DaciaPlant.git . Aceasta va crea o copie locală a proiectului pe computerul dvs.
+ 	_Clonarea proiectului_ : Executați comanda git clone https://github.com/IrinaRun/Proiect-final-DaciaPlant.git . Aceasta va crea o copie locală a proiectului pe computerul dvs.
   
- 	Instalarea dependențelor: Executați comanda pip install -r requirements.txt pentru a instala toate librăriile și dependențele necesare proiectului.
+ 	_Instalarea dependențelor_: Executați comanda pip install -r requirements.txt pentru a instala toate librăriile și dependențele necesare proiectului.
   
-	Rularea testelor: rulați comanda python –m unittest pentru a executa scenariile de test
-
-
-
+	_Rularea testelor_: rulați comanda python –m unittest pentru a executa scenariile de test
 
 
 
