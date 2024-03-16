@@ -13,17 +13,15 @@ import unittest
 
 
 class Search_products(TestCase):
-    ACCEPT_BTN = (By.XPATH, '//*[@id="gdprCookieBar"]/div/div[2]/button[2]')
+    ACCEPT_BTN = (By.XPATH, '//*[@id="gdprCookieBar"]//*[@class="action primary"]')
     CONNECT = (By.ID, 'authorization-trigger')
-    SELECT = (By.XPATH, '//*[@id="menu-5-65a52e42cc63d"]/ul/li[1]/a')
     CATEG_ANTISTRES = (By.XPATH, "//span[text() = 'Antistres']")
     CLS_ANTISTRES = (By.XPATH, '//*[@class="item amasty_xlanding_page"]')
     CAUTARE_PROD = (By.ID, 'search')
-    SEARCH_BTN = (By.XPATH, '//*[@id="search_mini_form"]/div[2]/button')
+    SEARCH_BTN = (By.XPATH,'// *[ @ id = "search_mini_form"] // button')
     NR_PROD = (By.XPATH, '// *[ @ id = "category-products-grid"]//li[@class = "item product product-item"]')
-    MES_AFISAT = (By.XPATH, '//*[@id="maincontent"]/div[1]/h1/span')
+    MES_AFISAT = (By.XPATH, '// *[ @ id = "maincontent"] // span[@class ="base"]')
     MENU_LINK = (By.XPATH, "//span[text() = 'La ce folosesc']")
-    SELECTIE = (By.XPATH, '//*[@id="narrow-by-list"]/div[1]/div[1]')
     INSOMNIE = (By.XPATH, "//*[text()='Insomnie  ']")
     PRODUSE_INSOMNIE = (By.XPATH, '//*[@id="category-products-grid"]//li[@class = "item product product-item"]')
 
@@ -36,7 +34,7 @@ class Search_products(TestCase):
     def tearDown(self) -> None:
         self.chrome.quit()
 
-    def test_teste4(self):
+    def test_search_one_product(self):
         # se verif cautarea unui produs
         self.chrome.implicitly_wait(10)
         self.chrome.find_element(*self.ACCEPT_BTN).click()
@@ -44,13 +42,11 @@ class Search_products(TestCase):
         self.chrome.find_element(*self.SEARCH_BTN).click()
         mesaj = self.chrome.find_element(*self.MES_AFISAT).text
         expected = 'CAUTATI REZULTATE PENTRU:'
-        while expected in mesaj:
-            break
-        print(f'Selectie ok')
+        assert expected in mesaj, 'Mesajul nu este afisat'
 
 
 
-    def test_teste5(self):
+    def test_results_number(self):
         # se verif ca nr de rezultate este peste 10
         self.chrome.implicitly_wait(10)
         self.chrome.find_element(*self.ACCEPT_BTN).click()
@@ -65,7 +61,8 @@ class Search_products(TestCase):
         else:
             print("Nr prod gasite insuficient, in afara intervalului solicitat")
 
-    def test_teste6(self):
+
+    def test_categoy_search(self):
         # se verif ca se poate naviga si alege categ Antistres
         self.chrome.implicitly_wait(10)
         self.chrome.find_element(*self.ACCEPT_BTN).click()
@@ -80,7 +77,7 @@ class Search_products(TestCase):
             print('Nu s-a realizat filtrul in categoria Antistres')
 
 
-    def test_teste7(self):
+    def test_minimun_number(self):
         # se verif ca sunt afisate minim 3 articole in categ 'Insomnie'
         self.chrome.implicitly_wait(10)
         self.chrome.find_element(*self.ACCEPT_BTN).click()

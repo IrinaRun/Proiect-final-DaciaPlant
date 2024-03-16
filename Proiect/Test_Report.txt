@@ -1,0 +1,26 @@
+
+Running tests... 
+----------------------------------------------------------------------
+ test_check_url (Proiect.Conectare.Login.test_check_url) ... OK (8.046342)s
+ test_login (Proiect.Conectare.Login.test_login) ... OK (7.373965)s
+ test_login_invalid_password (Proiect.Conectare.Login.test_login_invalid_password) ... OK (7.475199)s
+ test_logout (Proiect.Conectare.Login.test_logout) ... OK (9.573577)s
+ test_categoy_search (Proiect.Cautare_produse.Search_products.test_categoy_search) ... OK (6.779923)s
+ test_minimun_number (Proiect.Cautare_produse.Search_products.test_minimun_number) ... OK (7.673749)s
+ test_results_number (Proiect.Cautare_produse.Search_products.test_results_number) ... OK (7.606685)s
+ test_search_one_product (Proiect.Cautare_produse.Search_products.test_search_one_product) ... OK (7.652093)s
+ test_add_to_favorites (Proiect.Adaugare_produse.Add_to_cart.test_add_to_favorites) ... OK (10.981233)s
+ test_delete_from_cart (Proiect.Adaugare_produse.Add_to_cart.test_delete_from_cart) ... OK (11.254432)s
+ test_place_into_cart (Proiect.Adaugare_produse.Add_to_cart.test_place_into_cart) ... OK (9.929786)s
+
+----------------------------------------------------------------------
+Ran 11 tests in 0:02:18
+
+OK
+
+
+
+Generating HTML reports... 
+reports\TestResults_Proiect.Conectare.Login_2024-03-16_22-53-55.html
+reports\TestResults_Proiect.Cautare_produse.Search_products_2024-03-16_22-53-55.html
+reports\TestResults_Proiect.Adaugare_produse.Add_to_cart_2024-03-16_22-53-55.html

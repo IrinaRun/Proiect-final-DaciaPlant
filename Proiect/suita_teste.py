@@ -1,6 +1,5 @@
 import unittest
 
-# from HtmlTestRunner.runner import HTMLTestRunner
 import HTMLTestRunner
 from HTMLTestRunner.runner import HTMLTestRunner
 
@@ -19,9 +18,10 @@ class TestSuite(unittest.TestCase):
             unittest.defaultTestLoader.loadTestsFromTestCase(Add_to_cart)
         ])
 
-        # runner = HTMLTestRunner(log=True, )
-        # runner.run(teste_de_rulat)
-
-        with open('test_report.text', 'w') as f:
-            runner = unittest.TextTestRunner(f, verbosity=2)
+        # report_path = 'test_report.html'
+        report_path = 'Test_Report.txt'
+        with open(report_path, 'w') as report_file:
+            runner = HTMLTestRunner(stream=report_file, verbosity=2)
             runner.run(teste_de_rulat)
+
+
