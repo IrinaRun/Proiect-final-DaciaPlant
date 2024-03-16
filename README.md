@@ -2,7 +2,8 @@
 
 	Testarea automata este importanta deoarece permite realizarea unui numar mare de teste intr-un timp mai scurt decat la testarea manuala. Ea ajuta la marirea productivitatii.
  
-	In cadrul proiectului am folosit limbajul de programare Python si am utilizat IDE-ul PyCharm pentru a dezvolta si rula codul. Python este un un limbaj de programare popular, cunoscut pentru simplitatea sa. PyCharm este un mediu de dezvoltare integrat (IDE) specializat pentru dezvoltarea in Python, oferind un set bogat de functionaloitati si instrumente.
+	In cadrul proiectului am folosit limbajul de programare Python si am utilizat IDE-ul PyCharm pentru a dezvolta si rula codul. Python este un un limbaj de programare popular, cunoscut pentru simplitatea sa. 
+ PyCharm este un mediu de dezvoltare integrat (IDE) specializat pentru dezvoltarea in Python, oferind un set bogat de functionaloitati si instrumente.
  
 	Pentru a dezvolta si rula codul am folosit urmatoarele librarii:
 - unittest – am importat modulul unitttest care furnizeaza un framework pentru testarea automata si manuala
