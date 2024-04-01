@@ -1,15 +1,10 @@
-from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.support.wait import WebDriverWait
-from webdriver_manager import chrome
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from unittest import TestCase
-import unittest
+
 
 class Add_to_cart(TestCase):
     ACCEPT_BTN = (By.XPATH, '//*[@id="gdprCookieBar"]//*[@class="action primary"]')
@@ -21,7 +16,7 @@ class Add_to_cart(TestCase):
     ALEGE_PROD = (By.XPATH, '// *[@id ="category-products-grid"]//li[@class="item product product-item"][2]'
                             '//*[@class="product details product-item-details mf-initial"]')
     ADAUGA_COS = (By.ID, 'product-addtocart-button')
-    MESAJ_SUCCES = (By.XPATH, '// *[ @ id = "maincontent"] / div[1] / div[2] / div / div / div')
+    MESAJ_SUCCES = (By.XPATH,'// *[@id="maincontent"]/div[1]/div[2]/div/div/div')
     COS= (By.XPATH,'//*[@class="action showcart"]')
     STERGERE = (By.XPATH,'//*[@id="shopping-cart-table"]//*[@class="action action-delete"]')
     MES_STERGERE = (By.XPATH,'// *[ @ id = "maincontent"] // *[ @class ="cart-empty mf-initial"]')

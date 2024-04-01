@@ -3,13 +3,11 @@ from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
-from webdriver_manager import chrome
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from unittest import TestCase
-import unittest
+
 
 class Login(TestCase):
     ACCEPT_BTN = (By.XPATH, '//*[@id="gdprCookieBar"]//*[@class="action primary"]')
@@ -32,7 +30,7 @@ class Login(TestCase):
     def tearDown(self) -> None:
         self.chrome.quit()
 
-    def test_check_url(self):
+    def test_check_daciaplant_url(self):
         actual = self.chrome.current_url
         expected = 'https://www.daciaplant.ro/'
         self.assertEqual(actual, expected, 'The page is not correct')

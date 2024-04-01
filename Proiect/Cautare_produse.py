@@ -1,15 +1,10 @@
-from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.support.wait import WebDriverWait
-from webdriver_manager import chrome
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from unittest import TestCase
-import unittest
+
 
 
 class Search_products(TestCase):
@@ -56,10 +51,9 @@ class Search_products(TestCase):
         nr_prod_afisat = len(nr_prod)
         print(f'S-au gasit {nr_prod_afisat}')
         minim = 10
-        if nr_prod_afisat > minim:
-            print('Nr de produsele gasite este in intervalul solicitat')
-        else:
-            print("Nr prod gasite insuficient, in afara intervalului solicitat")
+        assert nr_prod_afisat > minim, (
+            f"Numărul de produse afișate este in intervalul solicitat "
+            f"este mai mic decât minimul așteptat ")
 
 
     def test_categoy_search(self):
