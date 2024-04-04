@@ -35,7 +35,7 @@ Pentru instalarea librariilor se foloseste comanda pip install <nume-librarie> i
 Am efectuat un numar de 11 teste, toate trecute cu succes. In timpul testarii, am acoperit functionalitatile de Login/ Logout, adaugare/stergere produs din cos, adaugare produs
 la favorite, navigare in cadrul unei categorii si subcategorii. 
 
-	In procesul de testare am identificat un bug in mesajul afisat la adaugarea unui produs in cos. Acest mesaj este:
+In procesul de testare am identificat un bug in mesajul afisat la adaugarea unui produs in cos. Acest mesaj este:
 
 ![image](https://github.com/IrinaRun/Proiect-final-DaciaPlant/assets/153914775/2e910634-99fc-46aa-9219-0272382d221b)
 
