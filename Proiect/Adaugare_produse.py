@@ -13,15 +13,14 @@ class Add_to_cart(TestCase):
     MENU_LINK = (By.XPATH, "//span[text() = 'La ce folosesc']")
     INSOMNIE = (By.XPATH, "//*[text()='Insomnie  ']")
     PRODUSE_INSOMNIE = (By.XPATH, '//*[@id="category-products-grid"]//li[@class = "item product product-item"]')
-    ALEGE_PROD = (By.XPATH, '// *[@id ="category-products-grid"]//li[@class="item product product-item"][2]'
-                            '//*[@class="product details product-item-details mf-initial"]')
+    ALEGE_PROD=(By.XPATH,'// *[@id="category-products-grid"]//a[text() ="Valeriana tinctura fara alcool"]')
     ADAUGA_COS = (By.ID, 'product-addtocart-button')
-    MESAJ_SUCCES = (By.XPATH,'// *[@id="maincontent"]/div[1]/div[2]/div/div/div')
+    MESAJ_SUCCES= (By.XPATH,'//div[@role="alert"]//div[@class="mf-initial"]')
     COS= (By.XPATH,'//*[@class="action showcart"]')
     STERGERE = (By.XPATH,'//*[@id="shopping-cart-table"]//*[@class="action action-delete"]')
-    MES_STERGERE = (By.XPATH,'// *[ @ id = "maincontent"] // *[ @class ="cart-empty mf-initial"]')
-    FAVORITE = (By.XPATH,'//*[@id="product_addtocart_form"]/div[2]/a/span')
-    MESAJ_FAVORITE =(By.XPATH,'//*[@id="maincontent"]/div[1]/div[2]/div/div/div')
+    MES_STERGERE = (By.XPATH,'//*[@id ="maincontent"]//*[@class="cart-empty mf-initial"]')
+    FAVORITE = (By.XPATH, '//a[@class="action towishlist"]')
+    MESAJ_FAVORITE = (By.XPATH, '//div[@role="alert"]//div[@class="mf-initial"]')
     USER = (By.ID, 'email')
     PAROLA = (By.NAME, 'login[password]')
     CONNECT_BTN = (By.XPATH, '//*[@id="send2"]')
@@ -46,7 +45,7 @@ class Add_to_cart(TestCase):
         self.chrome.find_element(*self.ADAUGA_COS).click()
         adaugat = self.chrome.find_element(*self.MESAJ_SUCCES).text
         expected = 'Ati adaugat Valeriana tinctura fara alcool '
-        assert expected in adaugat, (f"Textul afișat este diferit de cel așteptat. Așteptat: "
+        assert expected.strip() in adaugat.strip(), (f"Textul afișat este diferit de cel așteptat. Așteptat: "
                                     f"'{expected}', Obținut: '{adaugat}'")
 
 
@@ -79,7 +78,7 @@ class Add_to_cart(TestCase):
         self.chrome.find_element(*self.INSOMNIE).click()
         self.chrome.find_element(*self.ALEGE_PROD).click()
         self.chrome.find_element(*self.FAVORITE).click()
-        adaugat = 'Valeriana tinctura fara alcool has been added to your Wish List.'
+        adaugat = 'Valeriana tinctura fara alcool has been added to your Wish List. Faceti click aici pentru a continua cumparaturile.'
         expected = self.chrome.find_element(*self.MESAJ_FAVORITE).text
         print(expected)
         print('Produs adaugat la Favorite')

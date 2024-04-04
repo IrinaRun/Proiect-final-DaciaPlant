@@ -21,7 +21,9 @@ class TestSuite(unittest.TestCase):
         # report_path = 'test_report.html'
         report_path = 'Test_Report.txt'
         with open(report_path, 'w') as report_file:
-            runner = HTMLTestRunner(stream=report_file, verbosity=2)
+            runner = HTMLTestRunner(combine_reports=True, report_title = "Test execution report",
+                report_name = "Test results" )
             runner.run(teste_de_rulat)
+
 
 
