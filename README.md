@@ -33,7 +33,7 @@ Pentru instalarea librariilor se foloseste comanda pip install <nume-librarie> i
 - am testat ca se poate adauga un produs la favorite
 
 	Am efectuat un numar de 11 teste, toate trecute cu succes. In timpul testarii, am acoperit functionalitatile de Login/ Logout, adaugare/ stergere produs din cos, adaugare produs
- la favorite, navigare in cadrul unei categorii si subcategorii. 
+la favorite, navigare in cadrul unei categorii si subcategorii. 
 
 	In procesul de testare am identificat un bug in mesajul afisat la adaugarea unui produs in cos. Acest mesaj este:
 
